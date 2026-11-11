@@ -1,6 +1,6 @@
 # Gain-Scheduled Youla–Kučera Anti-Windup für LPV-Systeme
 
-[🇬🇧 English](README.md) | 🇩🇪 Deutsch
+
 
 Ein kleines, in sich geschlossenes Python-Projekt, das einen **beobachterbasierten, verstärkungsgeplanten Regler in Youla–Kučera-Form (YK) bzw. in koprimer Faktorisierung mit Anti-Windup** für eine lineare parametervariante (LPV) Strecke mit Stellgrößenbegrenzung implementiert.
 
@@ -207,8 +207,7 @@ Die LMIs sind homogen in $(P,Y)$ bzw. $(Q,W)$; die Normierungen `P >> I` und `Q 
 ## Fehlersuche
 
 | Symptom | Wahrscheinliche Ursache |
-|---|---|
-| `ImportError: cannot import name ... from 'plant'` | Funktion fehlt, falsch geschrieben oder Datei nicht gespeichert |
+| `ImportError: cannot import name ... from 'plant'` | Funktion fehlt,
 | `ValueError: inhomogeneous shape` in `plant.py` | Komma statt Dezimalpunkt in einer Matrix |
 | `np.block`-Formfehler in `ctrl_mats` | falsches Aufteilen von `Fa`; richtig: `Fx=Fa[:, :n]`, `Fi=Fa[:, n:]` |
 | Terminal mit Text überflutet | Debug-`print` in `ctrl_mats` vergessen (wird ~5 × pro Zeitschritt aufgerufen) |
@@ -226,12 +225,4 @@ Die LMIs sind homogen in $(P,Y)$ bzw. $(Q,W)$; die Normierungen `P >> I` und `Q 
 - S. X. Ding, *Model-Based Fault Diagnosis Techniques*, Springer, 2013 (koprime Faktorisierung, beobachterbasierte Parametrierung stabilisierender Regler).
 - K. Zhou, J. C. Doyle, K. Glover, *Robust and Optimal Control*, Prentice Hall, 1996 (doppelt koprime Faktorisierung, Youla-Parametrierung).
 - H. H. Niemann, J. Stoustrup, Arbeiten zu Verstärkungsplanung und Umschaltung mittels Youla-Parametrierung (z. B. *Gain scheduling using the Youla parameterization*, IEEE CDC, 1999).
-- M. V. Kothare, P. J. Campo, M. Morari, C. N. Nett, *A unified framework for the study of anti-windup designs*, Automatica, 1994 (Anti-Windup mit koprimer Faktorisierung).
-
----
-
-## Lizenz
-
-Wählen Sie eine Lizenz für Ihr Repository (z. B. MIT) und fügen Sie eine `LICENSE`-Datei hinzu.
-
-**Autor:** *Ihr Name / Ihre Institution*
+- M. V. Kothare, P. J. Campo, M. Morari, C. N. Nett, *A unified framework for the study of anti-windup designs*, Automatica, 1994 (Anti-Windup mit koprimer Faktorisie
